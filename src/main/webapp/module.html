@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<title>Angular JS - B</title>
+
+<script>
+	var app = angular.module("test_app",[])
+	
+	app.controller("test_controller", function($scope) {
+		$scope.data1 = 100
+		$scope.data2 = 200
+	})
+</script>
+</head>
+<body>
+
+	<div ng-app="test_app" ng-controller="test_controller">
+		<p>data1 : {{data1}}</p>
+		<p>data2 : {{data2}}</p>
+	</div>	
+	
+	<!-- 
+	지시자
+	Angular JS 애플리케이션에서 HTML 문서 구성을 위해 필요한 다양한 설정과 기능들을 지정하는것을 의미한다.
+	
+		- ng-app : angular js 애플리케이션에 대한 초기 설정
+		- ng-init : angular JS 애플리케이션에서 사용할 데이터 설정
+		- ng model : HTML 에서의 입력 요소들을 컨트롤 하기 위한 지시자
+		- ng-repeat : 지정된 태그를 배열에 들어 있는 요소만큼 반복하여 출력한다.
+	
+	 -->
+
+</body>
+</html>

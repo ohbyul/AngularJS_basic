@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<title>Angular JS - B</title>
+<script>
+	var app = angular.module("test_app", [])
+
+
+//	지시자 만들기
+//	directive 함수를 통해 지시자를 만들수 있으며 새롭게 만든 지시자를 이용해 원하는 곳에 HTML 코드를 삽입 할수 있다.
+	app.directive("directive1", function() {
+		return {
+			template : "사용자 정의 지시자1"
+		}
+	})
+	
+	
+	</script>
+
+</head>
+<body>
+
+	<div ng-app="test_app" ng-init="data1=100;data2='문자열';data3='red';data4=[100,200,300]">
+		<p>data1 : {{data1}}</p>
+		<p>data2 : {{data2}}</p>
+		<p>data3 : {{data3}}</p>
+		<p style="color:{{data3}}">문자열</p>
+		<p ng-repeat ="a1 in data4">{{a1}}</p>	<!-- 이거 자체가 for 문 -->
+		
+		<P>지시자 : <directive1></directive1></P>	<!-- 소프트캠퍼스 6장 8분4초 https://www.youtube.com/watch?v=kXmiygE6YRA&list=PLSBIrFmNg2JaJpDx2iPylb9oIwLlRshFb&index=6-->
+
+	</div>	
+
+</body>
+</html>
